@@ -1,0 +1,14 @@
+include ../button/index
+
+mixin list-item(title, description, path, upload, btntext, forLabel)
+  div.list-item(class= upload)
+    img.list-item__drag(src="img/drag.svg" alt="drag")
+    img.list-item__doc(src= path alt=title)
+    div.list-item__text
+      input.list-item__title(value= title, id= forLabel)
+      img.list-item__edit(src="img/change.svg" alt="edit")
+      p.list-item__description= description
+    +btn(btntext, forLabel)
+    +loading
+    +del
+    include ../delete/index

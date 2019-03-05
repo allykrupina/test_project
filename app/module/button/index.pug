@@ -1,0 +1,10 @@
+mixin btn(title, forLabel)
+  label.item-btn__edit(for= forLabel)= title
+
+mixin del
+  button.item-btn__delete(type="button" name="button")
+    img(src="img/delete.svg" alt="doc")
+
+mixin loading
+  button.item-btn__loading(type="button" name="button")
+    img(src="img/small.svg" alt="loading")

@@ -1,0 +1,27 @@
+extends main.pug
+include module/list-item/index
+
+
+block title
+  | test project
+
+block content
+  main.main-block
+    section.main-block__section
+      h1.main-block__title Add at least one document to your flow
+      form.main-block__list(action="#")
+        div.main-block__sort#sortable
+          -
+            var list = [
+              {title: "1. Simple document", description : "10 pages / No fillable fields", path : "img/doc.svg", upload : false, btntext: "Add fillable fields", forLabel : "list1"},
+              {title: "2. Fillable fields", description : "1 page / 2 fillable fields", path : "img/fillable.svg", upload : false, btntext: "Add fillable fields", forLabel : "list2"},
+              {title: "3. Created document", description : "4 pages / 2 fillable fields", path : "img/doc.svg", upload : false, btntext: "Add fillable fields", forLabel : "list3"},
+              {title: "4. airSlate Form", description : "10 questions", path : "img/form.svg", upload : false, btntext: "Add fillable fields", forLabel : "list4"},
+              {title: "5. Generated document", description : "2 pages / 12 tags used", path : "img/generate.svg", upload : false, btntext: "Edit settings", forLabel : "list5"},
+              {title: "6. User Authentication", description : "", path : "img/autentication.svg", upload : false, btntext: "Edit settings", forLabel : "list6"},
+              {title: "7. Payment order form", description : "", path : "img/payment.svg", upload : false, btntext: "Edit settings", forLabel : "list7"},
+              {title: "8. Attachment request", description : "", path : "img/attachment.svg", upload : false, btntext: "Edit settings", forLabel : "list8"},
+            ];
+          each item in list
+            +list-item(item.title, item.description, item.path, item.upload, item.btntext, item.forLabel)
+        include module/upload/index
