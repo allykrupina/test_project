@@ -11,7 +11,7 @@
 
 ## Functionality implemented :
  - [x] Draggable list item.
- - [x] Drag & drop zone and button for  files upload.
+ - [x] Drag & drop zone and button for upload small files (svg, png, jpg, docx, txt).
  - [x] Preloader loading  of uploaded files.
  - [x] Editing of list item title.
  - [x] List item deleting.
