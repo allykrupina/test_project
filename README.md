@@ -1,6 +1,6 @@
 # Test Project
 
-##Installation
+## Installation:
 
 1. Download and unzip the project or clone it from here -
 2. Run the installation from the terminal in the project folder.
