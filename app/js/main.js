@@ -24,8 +24,11 @@ $( document ).ready(function() {
       },
       error: function (file, response) {
         console.log('error');
-        var lastBlock = $('.main-block__sort .list-item:last-child');
+        var lastBlock = $('.main-block__sort .list-item:last-child'),
+            count = "list" + $('.list-item').length + 1;
         lastBlock.clone().addClass('upload').appendTo('.main-block__sort');
+        $('.upload').find('.item-btn__edit').attr('for', count);
+        $('.upload').find('.list-item__title').attr('id', count).val($('.list-item').length + '. New file');
         setTimeout(function() {
           $('.upload').removeClass('upload');
           deleteBlock();
