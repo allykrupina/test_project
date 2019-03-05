@@ -2,7 +2,7 @@
 
 ## Installation:
 
-1. Download and unzip the project or clone it from here -
+1. Download and unzip the project or clone it from here - https://github.com/allykrupina/test_project.git
 2. Run the installation from the terminal in the project folder.
 3. npm i or yarn install (dependencies installation).
 4. gulp start - command of project run.
